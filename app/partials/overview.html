@@ -1,0 +1,46 @@
+<div class="bg">
+    
+</div>
+
+
+<div class="menus-list">
+    <div class="loader" ng-show="showLoader"></div>
+    <div class="division" ng-click = "optionSelected('home')">
+        <a>   Home    </a>
+    </div>
+    <div class="division" ng-click = "optionSelected('bookNow')">
+        <a>  Book Now  </a>
+    </div>
+    <div class="division" ng-click = "optionSelected('cancellation')">
+        <a> Cancelation   </a>
+    </div>
+    
+    <div class="division" ng-click = "optionSelected('aboutUs')">
+        <a> About us   </a>
+    </div>
+    
+    <div class="division-logout">
+        <button ng-click = "logout()" type="button" class="btn btn-danger">{{userDetails.username}}
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+        </button>
+    </div>
+</div>
+
+
+<div ng-switch="userOption">
+    <div  ng-switch-when="home">
+         <div ng-include="'partials/home.html'"></div>
+    </div>
+    
+    <div  ng-switch-when="bookNow">
+         <div ng-include="'partials/bookNow.html'"></div>
+    </div>
+    
+    <div  ng-switch-when="aboutUs">
+         <div ng-include="'partials/aboutUs.html'"></div>
+    </div>
+    
+     <div  ng-switch-when="cancellation">
+         <div ng-include="'partials/cancellation.html'"></div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="container-fluid" ng-controller="bookNowCtrl">
+    
+    <!-- To show the page Loader-->
+            <h2></h2>
+              
+            <div class="loader" ng-show="showLoader"></div>
+    
+            <div class="alert alert-success text-center successsfull-tips" ng-show="showBooked" role="alert">
+                We have mailed you the Booking id  {{recordID}} ...
+                Thank you :)
+            </div>
+            
+            <div class="alert alert-danger text-center successsfull-tips" role="alert" ng-if="showError.length > 0">
+                {{showError}}    
+            </div>
+            
+            {{recordID}}
+            
+            <div class="custom-row">
+                
+                <h2></h2>
+                
+               
+    
+    
+                <div class="form-group">
+                
+                  <label for="sel1">Venue:</label>
+                
+                  <select class="form-control" id="sel1" ng-options="venue as venue.value for venue in venueList" ng-model="selectedVenue" ng-change="updateCourtNumberList()"></select>
+                
+                </div>
+                
+                
+                <div class="form-group">
+                
+                  <label for="sel1">Court Number:</label>
+                
+                
+                  <select class="form-control" id="sel1" ng-options="court as court.courtnumber for court in courtList" onkeydown="return false" ng-model="selectedCourtNumber" ng-change="updateTimeList()"></select>
+                
+                </div>
+                
+                
+                <div class="form-group">
+                  <label for="sel1">Date</label>
+                  <input type="date"  ng-model="bookingDetails.dateOfBooking" placeholder="dd/mm/yyyy" min = "{{currentDate | date:'yyyy-MM-dd'}}" onkeydown="return false"  max ="{{maxDate | date:'yyyy-MM-dd'}}"class="form-control">
+                </div>
+            
+            
+                <div class="form-group">
+                  <label for="sel1">Time Slot:</label>
+               
+                
+                  <select class="form-control" id="sel1" ng-options="time as time for time in timeList" ng-model="selectedTimeSlot" ng-change="updateTimeSlot()"></select>
+                
+                </div>
+
+                 <div class="row text-center">
+                    <p>
+                        <button type="button" ng-click="onSubmitBooking()" class="btn btn-success btn-lg" ng-disabled="!isFormValid()"> Submit </button>
+                        <button type="button" ng-click="reset()" class="btn btn-default btn-lg"> Reset </button>
+                    </p>
+                 </div>
+            </div>
+</div>
+  

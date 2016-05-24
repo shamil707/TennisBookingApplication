@@ -1,0 +1,49 @@
+
+<div class="container custom-color" ng-controller="cancellationCtrl">
+   <div class="loader" ng-show="showLoader"></div>
+   <h2></h2>
+   <div class="form-group">
+     <input type="text" ng-model="search" class="form-control" placeholder="Search">
+   </div>
+   <h2></h2>
+   <table class="table">
+    <thead>
+      <tr>
+       
+        <th>Venue</th>
+        <th>Court Number</th>
+        <th>Time</th>
+        <th>Date Of Booking</th>
+        <th>Booking ID</th>
+        <th>
+          <!--<button ng-click = "cancelBooking()" type="button" class="btn btn-danger"> Remove All
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>-->
+        </th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat= "item in userBookingRecords | filter:emailID |  filter:search">
+       
+        <td>{{item.venue}}</td>
+        <td>{{item.courtNumber}}</td>
+        <td>{{item.time}}</td>
+        <td>{{item.dateOfBooking}}</td>
+        <td>{{item.uniqueBookID}}</td>
+        <td>
+          <button ng-click = "cancelBooking(item.uniqueBookID)" type="button" class="btn btn-danger"> Remove
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="panel panel-primary custom-color-black" ng-if = "userBookingRecords.length == 0">
+    <div class="panel-body">
+      No Record Founds ....
+    </div>
+  </div>
+</div>
+
