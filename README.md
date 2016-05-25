@@ -1,6 +1,6 @@
   This Project is Simple POC for Tennis Booking and Cancelling.
 			
-	Included : AngularJS,Javascript,CSS#,HTML5,Bootstrap,NodeJS
+	Included : AngularJS,Javascript,CSS3,HTML5,Bootstrap,NodeJS,Karma
 
   Clone TennisBookingApplication
 
