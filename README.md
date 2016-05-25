@@ -21,7 +21,9 @@
 	
   Run the Application (Manually)
 
-	Download the node modules from the 
+	Download the node modules from the below url, extract it paste inside the TennisBookingApplication Folder(Root Folder)
+	
+	https://github.com/shamil707/node_modules  
         
         cd TennisBookingApplication
         
