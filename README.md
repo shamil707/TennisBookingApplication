@@ -22,3 +22,7 @@
 	http-server -a localhost -p 8000
 	
 	Now browse to the app at http://localhost:8000/index.html.
+
+ Contact
+
+	For more information on the POC please contact me with shamil707@gmail.com
