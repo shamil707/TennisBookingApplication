@@ -13,6 +13,8 @@
 	We have preconfigured the project with a simple development web server. The simplest way to start this server is:
 	(It will install the bower packages and node modules which is needed for this project to run)
 	
+	cd TennisBookingApplication
+	
 	npm start
 	
 	Now browse to the app at http://localhost:8000/index.html.
@@ -20,7 +22,9 @@
   Run the Application (Manually)
 
 	Download the node modules from the 
-
+        
+        cd TennisBookingApplication
+        
 	http-server -a localhost -p 8000
 	
 	Now browse to the app at http://localhost:8000/index.html.
