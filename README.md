@@ -4,7 +4,7 @@
 
   Clone TennisBookingApplication
 
-      Clone the angular-seed repository using git:
+      Clone the Tennis Booking Application repository using git:
 
       git clone https://github.com/shamil707/TennisBookingApplication.git
     
