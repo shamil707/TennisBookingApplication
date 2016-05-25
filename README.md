@@ -2,7 +2,7 @@
 			
 	Included : AngularJS,Javascript,CSS#,HTML5,Bootstrap,NodeJS
 
-  Clone angular-seed
+  Clone TennisBookingApplication
 
       Clone the angular-seed repository using git:
 
@@ -17,7 +17,8 @@
 	
   Run the Application (Manually)
 
-	We have preconfigured the project with a simple development web server. The simplest way to start this server is:
+	Download the node modules from the 
 
-	npm start
+	http-server -a localhost -p 8000
+	
 	Now browse to the app at http://localhost:8000/index.html.
